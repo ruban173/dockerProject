@@ -1,0 +1,8 @@
+apache:
+ image: httpd:2.4
+ volumes:
+   - ./app:/var/www/html/
+   - ./httpd/httpd.conf:/usr/local/apache2/conf/httpd.conf
+ depends_on:
+   - php
+      
