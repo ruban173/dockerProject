@@ -47,7 +47,7 @@ RUN docker-php-ext-configure intl --enable-intl && \
     && docker-php-source delete
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-#RUN chown -R www-data:www-data /var/www/html
+RUN chown -R www-data:www-data /var/www/html
 #RUN chmod -R 755 /var/www/html/storage
 RUN apt-get install nano
 RUN a2enmod rewrite
